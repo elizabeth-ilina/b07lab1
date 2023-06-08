@@ -1,5 +1,9 @@
+import java.io.File;
+import java.io.IOException;
+
 public class Driver {
 	public static void main(String [] args) {
+		/* 
 		Polynomial p = new Polynomial();
 		System.out.println(p.evaluate(3));
 		double [] c1 = {6,0,0,5};
@@ -11,6 +15,26 @@ public class Driver {
 		if(s.hasRoot(1))
 			System.out.println("1 is a root of s");
 		else
-			System.out.println("1 is not a root of s");
+			System.out.println("1 is not a root of s"); */
+	
+		
+		double [] c1 = {2, -1, 5, -1, 3};
+		int [] e1 = {0, 1, 2, 3, 4};
+		Polynomial p1 = new Polynomial(c1, e1);
+//		double [] c2 = {1};
+//		int [] e2 = {3};
+//		Polynomial p2 = new Polynomial(c2, e2);
+//		Polynomial s = p1.multiply(p2);
+//		for (int i=0; i<s.nonZeroCoefficients.length; i++){
+//			System.out.println(s.nonZeroCoefficients[i] + "x^" + s.exponents[i]);
+//		}
+		
+		p1.saveToFile("testing2.txt");
+		
+		
+//		File f = new File("C:\\Users\\eliza\\b07lab1\\testing.txt");
+//		Polynomial p1 = new Polynomial(f);
+		
+		
 	}
 }
