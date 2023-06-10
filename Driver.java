@@ -18,18 +18,19 @@ public class Driver {
 			System.out.println("1 is not a root of s"); */
 	
 		
-		double [] c1 = {2, -1, 5, -1, 3};
-		int [] e1 = {0, 1, 2, 3, 4};
-		Polynomial p1 = new Polynomial(c1, e1);
-//		double [] c2 = {1};
-//		int [] e2 = {3};
-//		Polynomial p2 = new Polynomial(c2, e2);
+//		double [] c1 = {2, -1, 5, -1, 3};
+//		int [] e1 = {0, 1, 2, 3, 4};
+//		Polynomial p1 = new Polynomial(c1, e1);
+		double [] c2 = {5, -3, 7};
+		int [] e2 = {0, 2, 8};
+		Polynomial p2 = new Polynomial(c2, e2);
 //		Polynomial s = p1.multiply(p2);
 //		for (int i=0; i<s.nonZeroCoefficients.length; i++){
 //			System.out.println(s.nonZeroCoefficients[i] + "x^" + s.exponents[i]);
 //		}
 		
-		p1.saveToFile("testing2.txt");
+//		p1.saveToFile("testing2.txt");
+		p2.saveToFile("testing2.txt");
 		
 		
 //		File f = new File("C:\\Users\\eliza\\b07lab1\\testing.txt");

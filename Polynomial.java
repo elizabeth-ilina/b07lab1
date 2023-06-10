@@ -164,8 +164,14 @@ public class Polynomial{
 		try{
 		PrintStream ps = new PrintStream(fileName);
 		for (int i=0; i<nonZeroCoefficients.length; i++){
-			if(i<(nonZeroCoefficients.length)-1 && nonZeroCoefficients[i+1]>0) ps.print(nonZeroCoefficients[i]+"x"+exponents[i]+"+");
-			else ps.print(nonZeroCoefficients[i]+"x"+exponents[i]);
+			if(i<(nonZeroCoefficients.length)-1 && nonZeroCoefficients[i+1]>0) {	//if next coefficient is positive, print a '+' in front of it
+				if(exponents[i]!=0)	ps.print(nonZeroCoefficients[i]+"x"+exponents[i]+"+");	//if it's not a constant, print normally
+				else if(exponents[i]==0) ps.print(nonZeroCoefficients[i]+"+");	//if it's a constant, only print the constant (its coefficient)
+			}
+			else { 
+				if(exponents[i]!=0) ps.print(nonZeroCoefficients[i]+"x"+exponents[i]);	//same idea as ^^
+				else if(exponents[i]==0) ps.print(nonZeroCoefficients[i]);
+			}
 		}
 		
 		}catch(IOException e) {
